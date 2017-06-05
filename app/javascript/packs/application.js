@@ -10,4 +10,4 @@
 import '../app-style'
 import 'materialize-css/dist/js/materialize.js'
 
-console.log('Hello World from Change')
+console.log('Hello World from Webpacker');
