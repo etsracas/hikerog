@@ -1,4 +1,21 @@
 <div class="container">
   <h1>投稿一覧</h1>
   <p>みんなの投稿したやまログを確認しよう</p>
+
+  <div class="row">
+    <% @yamalogs.each do |yamalog| %>
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image">
+            <%= image_tag("/img/no_image.jpg") %>
+          </div>
+          <div class="card-content">
+            <span class="card-title"><%= yamalog.mountain_name %></span>
+            <p><%= yamalog.hiking_date %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
 </div>

@@ -1,0 +1,2 @@
+class Yamalog < ApplicationRecord
+end

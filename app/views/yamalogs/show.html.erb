@@ -1,0 +1,27 @@
+<div class="container">
+  <h1><%= @yamalog.mountain_name %></h1>
+  <div class="row">
+    <div id="log_info" class="col s12 m6">
+      <table class="bordered">
+        <tbody>
+          <tr>
+            <th>日付</th>
+            <td><%= @yamalog.hiking_date %></td>
+          </tr>
+          <tr>
+            <th>天気</th>
+            <td><%= @yamalog.weather %></td>
+          </tr>
+          <tr>
+            <th>メンバー</th>
+            <td><%= @yamalog.member %></td>
+          </tr>
+          <tr>
+            <th>ルート</th>
+            <td><%= @yamalog.route %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
