@@ -3,6 +3,7 @@ import { Provider, connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as Actions from '../../actions/yamalog'
 
+import Header from '../../components/Header'
 import MessageList from '../../components/YamalogList'
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
     const { yamalog, actions } = this.props
     return (
       <div>
+        <Header />
         <MessageList yamalogs={yamalog} actions={actions} />
       </div>
     )
