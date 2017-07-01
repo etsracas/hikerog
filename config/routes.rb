@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :yamalogs do
       get '/', action: 'index'
+      get '/:id', action: 'show'
     end
   end
 
