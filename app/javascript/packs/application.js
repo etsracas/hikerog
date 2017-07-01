@@ -1,3 +1,5 @@
+import 'jquery'
+import 'Umi/dist/js/bootstrap'
 import '../app-style'
 
 import React from 'react'

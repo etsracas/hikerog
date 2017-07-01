@@ -13,7 +13,7 @@ const Header = () => {
               <div className='input-group'>
                 <input type='text' className='form-control' placeholder='search' />
                 <span className='input-group-btn'>
-                  <input type='submit' className='btn btn-inverse' defaultValue='Submit' />
+                  <input type='submit' className='btn btn-default' defaultValue='Submit' />
                 </span>
               </div>
             </div>
