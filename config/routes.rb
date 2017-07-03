@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   # routes for jbuilder
   namespace :api do
     namespace :yamalogs do
@@ -12,7 +11,8 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'yamalogs/' => 'yamalogs#index' 
+  devise_for :users
+  get 'yamalogs/' => 'yamalogs#index'
   get 'yamalogs/new' => 'yamalogs#new'
   post 'yamalogs/new' => 'yamalogs#create'
   get 'yamalogs/:id' => 'yamalogs#show'
