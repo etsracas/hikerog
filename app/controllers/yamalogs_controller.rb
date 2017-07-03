@@ -7,6 +7,10 @@ class YamalogsController < ApplicationController
   end
 
   def show
-    @yamalog = Yamalog.find_by(id: params[:id])
+    @yamalog = Yamalog.find(params[:id])
+  end
+
+  def destroy
+    
   end
 end
