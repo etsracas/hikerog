@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # routes for jbuilder
   namespace :api do
     namespace :yamalogs do
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
     end
   end
 
-  devise_for :users
+  devise_for :users, controllers: { :omniauth_callbacks => "omniauth_callbacks" }
   get 'yamalogs/' => 'yamalogs#index'
   get 'yamalogs/new' => 'yamalogs#new'
   post 'yamalogs/new' => 'yamalogs#create'

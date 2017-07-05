@@ -17,7 +17,12 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/yamalogs/new">投稿する</a></li>
         <li><a href="/yamalogs">山行一覧</a></li>
-        <li><a href="/myapages">マイページ</a></li>
+        <% if user_signed_in? %>
+          <li><a href="/myapages">マイページ</a></li>
+        <% else %>
+          <li><%= link_to 'ログイン', new_user_session_path %></li>
+          <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+        <% end %>
       </ul>
     </div>
   </div>
