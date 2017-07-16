@@ -8,10 +8,10 @@
         <li><a href="/yamalogs/new">投稿する</a></li>
         <li><a href="/yamalogs">山行一覧</a></li>
         <% if user_signed_in? %>
-          <li><a href="/myapages">マイページ</a></li>
+          <li><%= link_to 'マイページ', edit_user_registration_path %></li>
         <% else %>
           <li><%= link_to 'ログイン', new_user_session_path %></li>
-          <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+          <li><%= link_to '新規登録', new_user_registration_path %></li>
         <% end %>
       </ul>
     </div>
