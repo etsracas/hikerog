@@ -15,9 +15,13 @@
       <p class="alert"><%= alert %></p>
     <% end %>
     <%= render 'shared/header' %>
-    <div class="container">
+    <% if current_page?(root_path) %>
       <%= yield %>
-    </div>
+    <% else %>
+      <div class="container">
+        <%= yield %>
+      </div>
+    <% end %>
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>
