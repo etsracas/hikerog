@@ -9,10 +9,10 @@
 
   <body>
     <% if notice %>
-      <p class="notice"><%= notice %></p>
+      <div class="notice alert alert-success"><%= notice %></div>
     <% end %>
     <% if alert %>
-      <p class="alert"><%= alert %></p>
+      <div class="alert alert-warning"><%= alert %></div>
     <% end %>
     <%= render 'shared/header' %>
     <% if current_page?(root_path) %>
