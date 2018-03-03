@@ -23,5 +23,6 @@
 .byebug_history
 /public/packs
 /node_modules
-/bower_components
-/.idea/*
+/.idea
+/.vscode
+/vendor/bundle
