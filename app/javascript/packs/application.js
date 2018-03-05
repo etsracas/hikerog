@@ -1,3 +1,3 @@
 import 'jquery'
-import 'Umi/dist/js/bootstrap'
+import 'umi/js/bootstrap.min'
 import '../app-style'
