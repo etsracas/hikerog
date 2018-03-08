@@ -2,8 +2,8 @@ class CreateYamalogs < ActiveRecord::Migration[5.1]
   def change
     create_table :yamalogs do |t|
       t.string :user_id
-      t.date :hiking_date
-      t.string :mountain_name
+      t.date :hiking_date,      null: false
+      t.string :mountain_name,  null: false
       t.string :weather
       t.string :member
       t.text :route

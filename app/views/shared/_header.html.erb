@@ -6,7 +6,7 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/yamalogs/new">投稿する</a></li>
+          <li><%= link_to '投稿する', new_yamalog_path %></li>
           <li><a href="/yamalogs">山行一覧</a></li>
           <% if user_signed_in? %>
             <li class="dropdown">

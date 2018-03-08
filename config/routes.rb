@@ -13,12 +13,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users, controllers: { :omniauth_callbacks => "omniauth_callbacks" }
-  get 'yamalogs/' => 'yamalogs#index'
-  get 'yamalogs/new' => 'yamalogs#new'
-  post 'yamalogs/new' => 'yamalogs#create'
-  get 'yamalogs/:id' => 'yamalogs#show'
-  patch 'yamalogs/:id' => 'yamalogs#update'
-  delete 'yamalogs/:id' => 'yamalogs#destroy'
+  resources :yamalogs
 
   root 'home#index'
 

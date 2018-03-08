@@ -8,17 +8,17 @@
   </head>
 
   <body>
-    <% if notice %>
-      <div class="notice alert alert-success"><%= notice %></div>
-    <% end %>
-    <% if alert %>
-      <div class="alert alert-warning"><%= alert %></div>
-    <% end %>
     <%= render 'shared/header' %>
     <% if current_page?(root_path) %>
       <%= yield %>
     <% else %>
       <div class="container">
+        <% if flash[:notice] %>
+          <div class="notice alert alert-success"><%= flash[:notice] %></div>
+        <% end %>
+        <% if flash[:alert] %>
+          <div class="alert alert-danger"><%= flash[:alert] %></div>
+        <% end %>
         <%= yield %>
       </div>
     <% end %>

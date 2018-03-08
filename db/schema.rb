@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 20170703121842) do
 
   create_table "yamalogs", force: :cascade do |t|
     t.string "user_id"
-    t.date "hiking_date"
-    t.string "mountain_name"
+    t.date "hiking_date", null: false
+    t.string "mountain_name", null: false
     t.string "weather"
     t.string "member"
     t.text "route"
