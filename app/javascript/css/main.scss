@@ -1,5 +1,6 @@
 body {
-  margin-top: 80px
+  padding-top: 72px;
+  background-color: #fafafa;
 }
 
 .jumbotron.special {
@@ -17,6 +18,14 @@ body {
 
   .outline {
     margin-top: 180px;
+    color: #444;
+    h1 {
+      font-size: 56px;
+    }
+    p {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
   }
 }
 

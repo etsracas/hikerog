@@ -1,9 +1,7 @@
 <% now = Time.zone.now %>
 
-<div class="container">
-  <div class="page-header">
-    <h1>ヤマログを作成</h1>
-  </div>
+<div class="container py-3">
+  <h1 class="display-4 mb-5">ヤマログを作成</h1>
 
   <%= form_for(@yamalog, class: 'form-horizontal', role: 'form') do |f| %>
     <% if @yamalog.errors.any? %>
@@ -16,39 +14,49 @@
       </div>
     <% end %>
 
-    <div class="form-group">
-      <%= f.label :hiking_date %>
-      <div>
+    <div class="form-group row">
+      <%= f.label :hiking_date, class: 'col-sm-2 col-form-label' %>
+      <div class="col-sm-10">
         <%= f.datetime_select :hiking_date, start_year: now.year - 10, end_year: now.year %>
       </div>
     </div>
 
-    <div class="form-group">
-      <%= f.label :mountain_name %>
-      <%= f.text_field :mountain_name, class: 'form-control' %>
+    <div class="form-group row">
+      <%= f.label :mountain_name, class: 'col-sm-2 col-form-label' %>
+      <div class="col-sm-10">
+        <%= f.text_field :mountain_name, class: 'form-control' %>
+      </div>
     </div>
 
-    <div class="form-group">
-      <%= f.label :weather %>
-      <%= f.text_field :weather, class: 'form-control' %>
+    <div class="form-group row">
+      <%= f.label :weather, class: 'col-sm-2 col-form-label' %>
+      <div class="col-sm-10">
+        <%= f.text_field :weather, class: 'form-control' %>
+      </div>
     </div>
 
-    <div class="form-group">
-      <%= f.label :member %>
-      <%= f.text_field :member, class: 'form-control' %>
+    <div class="form-group row">
+      <%= f.label :member, class: 'col-sm-2 col-form-label' %>
+      <div class="col-sm-10">
+        <%= f.text_field :member, class: 'form-control' %>
+      </div>
     </div>
 
-    <div class="form-group">
-      <%= f.label :route %>
-      <%= f.text_area :route, class: 'form-control', row: 10 %>
+    <div class="form-group row">
+      <%= f.label :route, class: 'col-sm-2 col-form-label' %>
+      <div class="col-sm-10">
+        <%= f.text_area :route, class: 'form-control', row: 10 %>
+      </div>
     </div>
 
-    <div class="form-group">
-      <%= f.label :gpslog %>
-      <%= f.text_field :gpslog, class: 'form-control' %>
+    <div class="form-group row">
+      <%= f.label :gpslog, class: 'col-sm-2 col-form-label' %>
+      <div class="col-sm-10">
+        <%= f.text_field :gpslog, class: 'form-control' %>
+      </div>
     </div>
 
-    <%= f.submit '作成', class: 'btn btn-default', data: { disable_with: '作成中…' } %>
+    <%= f.submit '作成', class: 'btn btn-primary', data: { disable_with: '作成中…' } %>
 
   <% end %>
 

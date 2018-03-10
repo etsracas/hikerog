@@ -1,17 +1,16 @@
-<div class="container">
-  <h1>投稿一覧</h1>
+<div class="container py-3">
+  <h1 class="display-4 mb-5">投稿一覧</h1>
   <p>みんなの投稿したやまログを確認しよう</p>
 
   <div class="row">
     <% @yamalogs.each do |yamalog| %>
-      <div class="col s12 m4">
+      <div class="col-sm-4">
         <div class="card">
-          <div class="card-image">
-            <%= image_tag("/img/no_image.jpg") %>
-          </div>
-          <div class="card-content">
-            <span class="card-title"><%= yamalog.mountain_name %></span>
-            <p><%= yamalog.hiking_date %></p>
+          <%= image_tag("/img/no_image.jpg", class: 'card-img-top') %>
+          <div class="card-body">
+            <h3 class="card-title"><%= yamalog.mountain_name %></h3>
+            <p class="card-text">投稿日：<span><%= yamalog.created_at %></span></p>
+            <p class="card-text">投稿者：<span><%= yamalog.user.email %></span></p>
           </div>
         </div>
       </div>

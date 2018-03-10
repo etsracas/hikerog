@@ -10,7 +10,7 @@ class YamalogsController < ApplicationController
   def create
     @yamalog = current_user.yamalogs.build(yamalog_params)
     if @yamalog.save
-      redirect_to @yamalog, notice: '作成しました'
+      redirect_to @yamalog
     else
       render :new
     end

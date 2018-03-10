@@ -1,3 +1,4 @@
 import 'jquery'
-import 'umi/js/bootstrap.min'
+import 'bootstrap'
+import 'popper.js'
 import '../app-style'
