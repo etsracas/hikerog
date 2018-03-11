@@ -42,6 +42,18 @@ body {
   }
 }
 
+.yamalog-link a {
+  text-decoration: none;
+  color: #000;
+  :link, :visited, :hover {
+    color: #000;
+  }
+  :hover {
+    color: #555;
+    background-color: #fafafa;
+  }
+}
+
 .mypage {
   h2 {
     margin-top: 30px;

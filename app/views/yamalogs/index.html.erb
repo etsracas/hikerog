@@ -1,17 +1,19 @@
-<div class="container py-3">
+<div class="container py-3 yamalog-link">
   <h1 class="display-4 mb-5">投稿一覧</h1>
 
   <div class="row">
     <% @yamalogs.each do |yamalog| %>
-      <div class="col-sm-4 pb-4">
-        <div class="card">
-          <%= image_tag("/img/no_image.jpg", class: 'card-img-top') %>
-          <div class="card-body">
-            <h3 class="card-title"><%= yamalog.mountain_name %></h3>
-            <p class="card-text">投稿日：<span><%= yamalog.created_at %></span></p>
-            <p class="card-text">投稿者：<span><%= yamalog.user.email %></span></p>
+      <%= link_to(yamalog) do %>
+        <div class="col-sm-4 pb-4">
+          <div class="card">
+            <%= image_tag("/img/no_image.jpg", class: 'card-img-top') %>
+            <div class="card-body">
+              <h3 class="card-title card-link"><%= yamalog.mountain_name %></h3>
+              <p class="card-text">投稿日：<span><%= yamalog.created_at.strftime('%Y/%m/%d') %></span></p>
+              <p class="card-text">投稿者：<span><%= yamalog.user.email %></span></p>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
     <% end %>
   </div>
