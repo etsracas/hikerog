@@ -1,10 +1,9 @@
 <div class="container py-3">
   <h1 class="display-4 mb-5">投稿一覧</h1>
-  <p>みんなの投稿したやまログを確認しよう</p>
 
   <div class="row">
     <% @yamalogs.each do |yamalog| %>
-      <div class="col-sm-4">
+      <div class="col-sm-4 pb-4">
         <div class="card">
           <%= image_tag("/img/no_image.jpg", class: 'card-img-top') %>
           <div class="card-body">
