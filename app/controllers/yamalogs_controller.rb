@@ -34,7 +34,9 @@ class YamalogsController < ApplicationController
   end
 
   def destroy
-
+    @yamalog = current_user.yamalogs.find(params[:id])
+    @yamalog.destroy!
+    redirect_to yamalogs_path
   end
 
   private
