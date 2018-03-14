@@ -20,6 +20,19 @@ class YamalogsController < ApplicationController
     @yamalog = Yamalog.find(params[:id])
   end
 
+  def edit
+    @yamalog = current_user.yamalogs.find(params[:id])
+  end
+
+  def update
+    @yamalog = current_user.yamalogs.find(params[:id])
+    if @yamalog.update(yamalog_params)
+      redirect_to @yamalog
+    else
+      render :edit
+    end
+  end
+
   def destroy
 
   end

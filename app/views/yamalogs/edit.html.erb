@@ -1,0 +1,63 @@
+<% now = Time.zone.now %>
+
+<div class="container py-3">
+  <h1 class="display-4 mb-5">ヤマログを編集</h1>
+
+  <%= form_for(@yamalog, class: 'form-horizontal', role: 'form') do |f| %>
+    <% if @yamalog.errors.any? %>
+      <div class="alert alert-danger">
+        <ul>
+          <% @yamalog.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group row">
+      <%= f.label :hiking_date, class: 'col-sm-2 col-form-label' %>
+      <div class="col-sm-10">
+        <%= f.datetime_select :hiking_date, start_year: now.year - 10, end_year: now.year %>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <%= f.label :mountain_name, class: 'col-sm-2 col-form-label' %>
+      <div class="col-sm-10">
+        <%= f.text_field :mountain_name, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <%= f.label :weather, class: 'col-sm-2 col-form-label' %>
+      <div class="col-sm-10">
+        <%= f.text_field :weather, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <%= f.label :member, class: 'col-sm-2 col-form-label' %>
+      <div class="col-sm-10">
+        <%= f.text_field :member, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <%= f.label :route, class: 'col-sm-2 col-form-label' %>
+      <div class="col-sm-10">
+        <%= f.text_area :route, class: 'form-control', row: 10 %>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <%= f.label :gpslog, class: 'col-sm-2 col-form-label' %>
+      <div class="col-sm-10">
+        <%= f.text_field :gpslog, class: 'form-control' %>
+      </div>
+    </div>
+
+    <%= f.submit '更新', class: 'btn btn-primary', data: { disable_with: '更新中…' } %>
+
+  <% end %>
+
+</div>
