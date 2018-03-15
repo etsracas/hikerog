@@ -10,6 +10,7 @@ ja:
         weather: 天気
         member: メンバー
         route: ルート
+        yamalog_pic: 写真
         gpslog: GPSログ
     errors:
       messages:

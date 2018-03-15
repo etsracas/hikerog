@@ -20,6 +20,12 @@
           <th>メンバー</th>
           <td><%= @yamalog.member %></td>
         </tr>
+        <% if @yamalog.yamalog_pic? %>
+          <tr>
+            <th>写真</th>
+            <td><%= link_to image_tag(@yamalog.yamalog_pic_url(:thumb)), @yamalog.yamalog_pic_url %></td>
+          </tr>
+        <% end %>
         <tr>
           <th>ルート</th>
           <td><%= @yamalog.route %></td>
