@@ -63,9 +63,12 @@
     </div>
 
     <div class="form-group row">
-      <%= f.label :gpslog, class: 'col-sm-2 col-form-label' %>
+      <div class="col-sm-2">
+        <%= f.label :gpslog, class: 'col-form-label' %>
+      </div>
       <div class="col-sm-10">
-        <%= f.text_field :gpslog, class: 'form-control' %>
+        <%= f.file_field :gpslog %>
+        <%= f.hidden_field :gpslog_cache %>
       </div>
     </div>
 

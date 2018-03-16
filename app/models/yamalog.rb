@@ -1,5 +1,6 @@
 class Yamalog < ApplicationRecord
   mount_uploader :yamalog_pic, YamalogPicUploader
+  mount_uploader :gpslog, GpslogUploader
   belongs_to :user
 
   validates :hiking_date, presence: true
