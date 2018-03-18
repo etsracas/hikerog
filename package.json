@@ -20,6 +20,7 @@
     "jquery": "^3.2.1",
     "js-yaml": "^3.8.4",
     "node-sass": "^4.5.3",
+    "ol": "^4.6.4",
     "path-complete-extname": "^0.1.0",
     "popper.js": "^1.12.9",
     "postcss-cssnext": "^3.1.0",

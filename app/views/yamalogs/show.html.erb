@@ -33,7 +33,10 @@
         <% if @yamalog.gpslog? %>
           <tr>
             <th>GPSログ</th>
-            <td><%= @yamalog.gpslog_url %></td>
+            <td>
+              <div id="map" class="map"></div>
+              <%= hidden_field :yamalog, :gpslog_url, class: 'yamalog_gpslog_url' %>
+            </td>
           </tr>
         <% end %>
       </tbody>
